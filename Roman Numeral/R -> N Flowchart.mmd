@@ -1,0 +1,104 @@
+graph TD
+A(Row 1) --> |M| AA[Add 1000]
+A --> |D| AB[Add 500]
+A --> |C| AC[Add 100]
+A --> |L| AD[Add 50]
+A --> |X| AE[Add 10]
+A --> |V| AF[Add 5]
+A --> |I| AG[Add 1]
+
+AA --> A
+AB --> B
+AC --> H
+AD --> D
+AE --> I
+AF --> F
+AG --> J
+
+B(Row 2) --> |C| BA[Add 100]
+B --> |L| BB[Add 50]
+B --> |X| BC[Add 10]
+B --> |V| BD[Add 5]
+B --> |I| BE[Add 1]
+
+BA --> H
+BB --> D
+BC --> I
+BD --> F
+BE --> J
+
+C(Row 3) --> |C| CA[Add 100]
+C --> |L| CB[Add 50]
+C --> |X| CC[Add 10]
+C --> |V| CD[Add 5]
+C --> |I| CE[Add 1]
+
+CA --> C
+CB --> D
+CC --> I
+CD --> F
+CE --> J
+
+D(Row 4) --> |L| DA[Add 50]
+D --> |X| DB[Add 10]
+D --> |V| DC[Add 5]
+D --> |I| DD[Add 1]
+
+DA --> E
+DB --> I
+DC --> F
+DD --> J
+
+E(Row 5) --> |X| EA[Add 10]
+E --> |V| EB[Add 5]
+E --> |I| EC[Add 1]
+
+EA --> E
+EB --> F
+EC --> J
+
+F(Row 6) --> |V| FA[Add 5]
+F --> |I| FB[Add 1]
+
+FA --> G
+FB --> J
+
+G(Row 7) --> |I| GA[Add 1]
+
+GA --> G
+
+H(Row 8) --> |M| HA[Add 800]
+H --> |D| HB[Add 300]
+H --> |C| HC[Add 100]
+H --> |L| HD[Add 50]
+H --> |X| HE[Add 10]
+H --> |V| HF[Add 5]
+H --> |I| HG[Add 1]
+
+HA --> D
+HB --> D
+HC --> C
+HD --> E
+HE --> I
+HF --> G
+HG --> J
+
+I(Row 10) --> |C| IA[Add 80]
+I --> |L| IB[Add 30]
+I --> |X| IC[Add 10]
+I --> |V| ID[Add 5]
+I --> |I| IE[Add 1]
+
+IA --> F
+IB --> F
+IC --> E
+ID --> G
+IE --> J
+
+J(Row 11) --> |X| JA[Add 8]
+J --> |V| JB[Add 3]
+J --> |I| JC[Add 1]
+
+JA --> 0(End)
+JB --> 0
+JC --> G
