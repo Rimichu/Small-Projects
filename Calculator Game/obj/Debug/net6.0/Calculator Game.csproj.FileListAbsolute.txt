@@ -1,0 +1,15 @@
+C:\Users\rimic\Desktop\Homework\Calculator Game\bin\Debug\net6.0\Calculator Game.exe
+C:\Users\rimic\Desktop\Homework\Calculator Game\bin\Debug\net6.0\Calculator Game.deps.json
+C:\Users\rimic\Desktop\Homework\Calculator Game\bin\Debug\net6.0\Calculator Game.runtimeconfig.json
+C:\Users\rimic\Desktop\Homework\Calculator Game\bin\Debug\net6.0\Calculator Game.dll
+C:\Users\rimic\Desktop\Homework\Calculator Game\bin\Debug\net6.0\Calculator Game.pdb
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.csproj.AssemblyReference.cache
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.AssemblyInfoInputs.cache
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.AssemblyInfo.cs
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.csproj.CoreCompileInputs.cache
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.dll
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\refint\Calculator Game.dll
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.pdb
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\Calculator Game.genruntimeconfig.cache
+C:\Users\rimic\Desktop\Homework\Calculator Game\obj\Debug\net6.0\ref\Calculator Game.dll
