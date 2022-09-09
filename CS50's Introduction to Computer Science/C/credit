@@ -1,0 +1,92 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <math.h>
+
+void Luhn(long number);
+
+int main(void)
+{
+    long number;
+
+    // asks the user for the bank number
+    number = get_long("What is the Bank number: ");
+
+    Luhn(number);
+}
+
+void Luhn(long number)
+{
+    int odd = 0;
+    int even = 0;
+    int digit, check;
+    int prefix = 0;
+    long prefix_finder = 1000000000000000;
+    int length_of_number = 17;
+
+    // finds the prefix of the card
+    while (!(prefix > 9 && prefix < 100))
+    {
+        prefix_finder /= 10;
+        prefix = number / prefix_finder;
+        length_of_number--;
+    }
+
+    // ensures the length of the card is sufficient before continueing with the program
+    if (!(length_of_number == 16 || length_of_number == 15 || length_of_number == 13))
+    {
+        printf("INVALID\n");
+        return;
+    }
+
+    // for every digit i is counted to check if the digit counted is even or odd
+    for (int i = 0; i < 16; i++)
+    {
+        // each digit is singled out one by one and the original 16 digit number is reduced
+        digit = number % 10;
+        number /= 10;
+        // checks if the digit is even or odd so the numbers can be handled accordingly
+        if (i % 2 == 0)
+        {
+            even += digit;
+        }
+        else
+        {
+            // the digit is multiplied by 2 then similar to the long number, the product's digits are added to the "odd" variable
+            digit *= 2;
+            for (int j = 0; digit > 0;)
+            {
+                j = digit % 10;
+                digit /= 10;
+                odd += j;
+            }
+        }
+    }
+    check = round(odd + even);
+    // a check to see if the number is valid or not
+    if (check % 10 == 0)
+    {
+        // using the prefix, the correct company is identified
+        if (prefix == 34 || prefix == 37)
+        {
+            printf("AMEX\n");
+        }
+        else if (prefix > 50 && prefix < 56)
+        {
+            printf("MASTERCARD\n");
+        }
+        else if (prefix >= 40 && prefix < 50)
+        {
+            printf("VISA\n");
+        }
+        // if no correct company exists the number is deemed invalid
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+}
+
