@@ -1,0 +1,81 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(int argc, string argv[])
+{
+    // ensures only 1 input is provided
+    if (argc != 2)
+    {
+        printf("Usage: ./substitution key\n");
+        return 1;
+    }
+    // ensures that the key is 26 charachters long
+    if (strlen(argv[1]) != 26)
+    {
+        printf("Key must contain 26 characters.\n");
+        return 1;
+    }
+    // ensures that the key only includes alphabetic charachters
+    for (int i = 0; (int) argv[1][i] != 0; i++)
+    {
+        if (!(isalpha(argv[1][i])))
+        {
+            printf("Key must only contain alphabetical charachters\n");
+            return 1;
+        }
+    }
+    for (int i = 0; i < 25; i++)
+    {
+        for (int j = i + 1; j < 26; j++)
+        {
+            if (argv[1][i] == argv[1][j])
+            {
+                printf("Key must have no duplicates\n");
+                return 1;
+            }
+        }
+    }
+
+    string plaintext = get_string("plaintext: ");
+
+    // ensures the ciphertext is the same length as the plaintext
+    char ciphertext[strlen(plaintext) + 1];
+    int difference;
+    int array_index;
+
+    for (int i = 0; (int) plaintext[i] != 0; i++)
+    {
+        // checks wether the characther is upper or lower case to ensure the math (to convert from plaintext to ciphertext) is completed correctly
+        if (isupper(plaintext[i]))
+        {
+            difference = 65;
+        }
+        else if (islower(plaintext[i]))
+        {
+            difference = 97;
+        }
+        else // ignore non alpha charachters
+        {
+            ciphertext[i] = plaintext[i];
+            continue;
+        }
+        array_index = (int) plaintext[i] - difference;
+        // checks if the initial plaintext charachter was upper or lower case and assigns a similar case to the ciphertext charachter
+        if (isupper(plaintext[i]))
+        {
+            ciphertext[i] = toupper(argv[1][array_index]);
+        }
+        else if (islower(plaintext[i]))
+        {
+            ciphertext[i] = tolower(argv[1][array_index]);
+        }
+    }
+    // ensures that the string finishes with a null charachter
+    ciphertext[strlen(plaintext)] = (char) 0;
+    printf("ciphertext: %s\n", ciphertext);
+
+    // if everything goes well, 0 is returned
+    return 0;
+}
