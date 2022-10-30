@@ -1,7 +1,7 @@
 # Small-Projects
 Miscellaneous projects that don't warrant their own repository.
 ## CS50's Introduction to Computer Science
-A series of programs to aid me in the completion of this course
+A series of programs I made for the course. Since joining university I have stopped using the course.
 ## Calculator Game
 A small game I made whilst learning C# to allow my brother to learn the 4 most common math operators.
 ## Further Pure with Technology
